@@ -84,7 +84,7 @@ You can modify the following parameters in the code:
 
 ## Output
 
-([Players Detection and Re-Identification](https://github.com/K-Tanishq/Player-Detection-Reidentification/blob/98ae26d98b9ebfbedf229f206e1120b47e3725e7/output.gif))
+![Players Detection and Re-Identification](https://github.com/K-Tanishq/Player-Detection-Reidentification/blob/98ae26d98b9ebfbedf229f206e1120b47e3725e7/output.gif)
 
 ## Performance
 
