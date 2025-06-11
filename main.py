@@ -7,11 +7,20 @@ confidence = 0.8
 iou_threshold = 0.3
 model_path = "best.pt"
 video_path = "15sec_input_720p.mp4"
+output_path = "output_with_tracking.mp4"
 
 detector = YoloDetector(model_path=model_path, confidence=confidence)
 tracker = Tracker()
 
 cap = cv2.VideoCapture(video_path)
+
+width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+fps = int(cap.get(cv2.CAP_PROP_FPS))
+
+output_path = "output_with_tracking.mp4"
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
 
 while cap.isOpened():
     ret, frame = cap.read()
@@ -38,6 +47,7 @@ while cap.isOpened():
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
     print(f"FPS: {fps:.2f}")
     print("---------------------------------")
+    out.write(frame)
 
     cv2.imshow("Detection + Tracking", frame)
     key = cv2.waitKey(1) & 0xFF
@@ -45,4 +55,7 @@ while cap.isOpened():
       break
 
 cap.release()
+out.release()
 cv2.destroyAllWindows()
+
+print(f"Output video saved to: {output_path}")
