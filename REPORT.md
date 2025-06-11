@@ -1,5 +1,3 @@
-### By Tanishq Kankerwal
-
 ### Code:
 [https://github.com/K-Tanishq/Player-Detection-Reidentification](https://github.com/K-Tanishq/Player-Detection-Reidentification)
 
@@ -36,7 +34,7 @@ The goal of this project is to detect and track players in a 15-second football 
 # Result
 
 The final pipeline accurately detects and re-identifies players across the video timeline, ensuring consistent IDs with good bounding box quality and real-time performance.
-([https://raw.githubusercontent.com/K-Tanishq/Player-Detection-Reidentification/main/output.gif](https://github.com/K-Tanishq/Player-Detection-Reidentification/blob/98ae26d98b9ebfbedf229f206e1120b47e3725e7/output.gif))
+([Players Detection and Re-Identification](https://github.com/K-Tanishq/Player-Detection-Reidentification/blob/98ae26d98b9ebfbedf229f206e1120b47e3725e7/output.gif))
 
 # Challenges Faced
 
